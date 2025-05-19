@@ -1,0 +1,79 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%; /* Light background */
+    --foreground: 240 10% 3.9%; /* Dark foreground */
+    
+    --card: 0 0% 100%; /* White card */
+    --card-foreground: 240 10% 3.9%; /* Dark card foreground */
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    
+    --primary: 43 85% 64%; /* #f2bb53 */
+    --primary-foreground: 0 0% 100%; /* White foreground for primary buttons */
+    
+    --secondary: 240 4.8% 95.9%; /* Light gray secondary */
+    --secondary-foreground: 240 5.9% 10%; /* Dark secondary foreground */
+    
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%; /* Muted gray text */
+    
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 240 5.9% 90%; /* Light border */
+    --input: 240 5.9% 90%; /* Light input background */
+    --ring: 43 85% 64%; /* #f2bb53 */
+    
+    --radius: 0.75rem; 
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-600; /* Adjusted gradient for light theme */
+}
+
+.app-hero-glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(242, 187, 83, 0.15) 0%, rgba(245, 158, 11, 0.1) 40%, rgba(255,255,255,0) 70%); /* Adjusted glow for light theme */
+  filter: blur(50px);
+  z-index: -1;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+
+.step-card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px -5px rgba(242, 187, 83, 0.2), 0 4px 8px -4px rgba(245, 158, 11, 0.1); /* Adjusted shadow for light theme */
+}
+
+.screenshot-glow {
+  box-shadow: 0 0 25px rgba(242, 187, 83, 0.25), 0 0 50px rgba(245, 158, 11, 0.15); /* Adjusted glow for light theme */
+}
