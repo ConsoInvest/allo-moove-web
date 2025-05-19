@@ -21,8 +21,8 @@ const pricingPlans = [
   },
   {
     name: 'Standard',
-    priceMonthly: 19,
-    priceAnnual: 15,
+    priceMonthly: 3000,
+    priceAnnual: 50000,
     description: 'Idéal pour une utilisation régulière et des besoins variés.',
     features: [
       'Jusqu\'à 20 demandes / mois',
@@ -36,8 +36,8 @@ const pricingPlans = [
   },
   {
     name: 'Premium',
-    priceMonthly: 49,
-    priceAnnual: 39,
+    priceMonthly: 15000,
+    priceAnnual: 95000,
     description: 'Pour un service illimité et une assistance personnalisée.',
     features: [
       'Demandes illimitées',
@@ -127,14 +127,14 @@ const AppPricingPlans = () => {
                 
                 <div className="mb-6">
                   <span className="text-4xl font-bold text-foreground">
-                    {isAnnual ? plan.priceAnnual : plan.priceMonthly}€
+                    {isAnnual ? plan.priceAnnual : plan.priceMonthly}FCFA
                   </span>
                   <span className="text-gray-500 ml-1">/{isAnnual ? 'an' : 'mois'}</span>
                   {isAnnual && plan.priceMonthly > 0 && (
-                     <p className="text-xs text-gray-400">Soit {plan.priceMonthly}€/mois facturé annuellement</p>
+                     <p className="text-xs text-gray-400">Soit {plan.priceMonthly}FCFA/mois facturé annuellement</p>
                   )}
                    {!isAnnual && plan.priceAnnual > 0 && plan.name !== 'Gratuit' && (
-                     <p className="text-xs text-primary font-semibold">Économisez { (plan.priceMonthly * 12) - (plan.priceAnnual * 12) }€/an avec l'offre annuelle!</p>
+                     <p className="text-xs text-primary font-semibold">Économisez { (plan.priceMonthly * 12) - (plan.priceAnnual * 12) }FCFA/an avec l'offre annuelle!</p>
                   )}
                 </div>
 
