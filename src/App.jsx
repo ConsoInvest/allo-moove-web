@@ -11,9 +11,9 @@ import AppPricingPlans from "@/components/app/AppPricingPlans";
 import AppFAQ from "@/components/app/AppFAQ";
 import AppCTA from "@/components/app/AppCTA";
 import AppFooter from "@/components/app/AppFooter";
-import HomePage from "./pages/home";
-import PrivacyPage from "./pages/privacy";
+import PrivacyPage from "./pages/Privacy";
 import ContactPage from "./pages/Contact";
+import HomePage from "./pages/Home";
 
 const App = () => {
   return (
