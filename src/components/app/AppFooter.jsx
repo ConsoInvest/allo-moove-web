@@ -18,7 +18,7 @@ const AppFooter = () => {
     {
       title: "Légal",
       links: [
-        { name: "Politique de Confidentialité", href: "#" },
+        { name: "Politique de Confidentialité", href: "/privacy-policy" },
         { name: "Conditions d'Utilisation", href: "#" },
         { name: "Politique Cookies", href: "#" },
       ]

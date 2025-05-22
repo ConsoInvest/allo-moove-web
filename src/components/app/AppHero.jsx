@@ -69,7 +69,7 @@ const AppHero = () => {
             <img
               className="max-h-[500px] sm:max-h-[600px] md:max-h-[700px] w-full object-contain rounded-[2rem]"
               alt="Maquette de l'application AlloMoove"
-              src="/images/image.png"
+              src="/images/mobile-app.png"
             />
           </motion.div>
         </div>
